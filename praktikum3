@@ -1,0 +1,126 @@
+def Baju():
+    Baju = {
+        'Baju Kaos' : 60000,
+        'Baju Lengan Panjang' : 800000,
+        'Baju V-Neck' : 65000,
+        'Baju Tanpa Lengan' : 50000
+    }
+    print('------------------')
+    for key, value in Baju.items():
+        print(key, ': Rp,', value)
+    print('------------------')
+    x = Baju[input('Masukan Pesanan anda? :')]
+    y = int(input('Berapa banyak yang anda ingin beli? :'))
+    z = input('Masukan hari : ')
+    print('------------------\n------------------')
+    jumlah = x * y
+    if z in ('senin', 'selasa','jum\'at','minggu'):
+        print('mohon maaf tidak ada diskon')
+        print('Total Pembelian anda adalah Rp, ',jumlah)
+    elif z == 'rabu':
+        print('Karna Hari ini adalah Rabu\nAnda mendapatkan diskon sebesar 10%')
+        diskon = jumlah * (10/100)
+        hasil_diskon = jumlah - diskon
+        print('total pembelian anda adalah Rp,', hasil_diskon)
+    elif z == 'sabtu':
+        print('Karna Hari ini adalah Sabtu\nAnda mendapatkan diskon sebesar 25%')
+        diskon = jumlah * (25/100)
+        hasil_diskon = jumlah - diskon
+        print('total pembelian anda adalah Rp,', hasil_diskon)
+
+def Celana():
+    Celana = {
+        'Celana Pendek' : 50000,
+        'Celana Panjang' : 70000,
+        'Celana Jeans' : 75000,
+        'Celana bekas' : 40000
+    }
+    print('------------------')
+    for key, value in Celana.items():
+        print(key, ': Rp,', value)
+    print('------------------')
+    x = Celana[input('Masukan Pesanan anda? :')]
+    y = int(input('Berapa banyak yang anda ingin beli? :'))
+    z = input('Masukan hari : ')
+    print('------------------\n------------------')
+    jumlah = x * y
+    if z in ('senin', 'selasa','jum\'at','minggu'):
+        print('mohon maaf tidak ada diskon')
+        print('Total Pembelian anda adalah Rp, ',jumlah)
+    elif z == 'rabu':
+        print('Karna Hari ini adalah Rabu\nAnda mendapatkan diskon sebesar 10%')
+        diskon = jumlah * (10/100)
+        hasil_diskon = jumlah - diskon
+        print('total pembelian anda adalah Rp,', hasil_diskon)
+    elif z == 'sabtu':
+        print('Karna Hari ini adalah Sabtu\nAnda mendapatkan diskon sebesar 25%')
+        diskon = jumlah * (25/100)
+        hasil_diskon = jumlah - diskon
+        print('total pembelian anda adalah Rp,', hasil_diskon)
+
+def Jaket():
+    Jaket = {
+        'Jaket Biasa' : 80000,
+        'Jaket Hoodie' : 85000,
+        'Jaket Pendek' : 75000,
+    }
+    print('------------------')
+    for key, value in Jaket.items():
+        print(key, ': Rp,', value)
+    print('------------------')
+    x = Jaket[input('Masukan Pesanan anda? :')]
+    y = int(input('Berapa banyak yang anda ingin beli? :'))
+    z = input('Masukan hari : ')
+    print('------------------\n------------------')
+    jumlah = x * y
+    if z in ('senin', 'selasa','jum\'at','minggu'):
+        print('mohon maaf tidak ada diskon')
+        print('Total Pembelian anda adalah Rp, ',jumlah)
+    elif z == 'rabu':
+        print('Karna Hari ini adalah Rabu\nAnda mendapatkan diskon sebesar 10%')
+        diskon = jumlah * (10/100)
+        hasil_diskon = jumlah - diskon
+        print('total pembelian anda adalah Rp,', hasil_diskon)
+    elif z == 'sabtu':
+        print('Karna Hari ini adalah Sabtu\nAnda mendapatkan diskon sebesar 25%')
+        diskon = jumlah * (25/100)
+        hasil_diskon = jumlah - diskon
+        print('total pembelian anda adalah Rp,', hasil_diskon)
+
+def menu():
+    while True:
+        print('#==========#\nMenu Pilihan\n#==========#')
+        print('  1. Baju\n  2. Celana\n  3. Jaket\n  4. Exit')
+        print('#==========#')
+        x = input('Masukan Pilihan anda: ')
+        if x == '1' or x == 'baju':
+            Baju()
+            print('=============================')
+            print('TERIMA KASIH TELAH BERBELANJA')
+            print('=============================')
+            break
+        elif x == '2' or x == 'celana':
+            Celana()
+            print('=============================')
+            print('TERIMA KASIH TELAH BERBELANJA')
+            print('=============================')
+            break
+        elif x == '3' or x == 'jaket':
+            Jaket()
+            print('=============================')
+            print('TERIMA KASIH TELAH BERBELANJA')
+            print('=============================')
+            break
+        elif x == '4' or x == 'Exit':
+            print('=============================')
+            print('TERIMA KASIH TELAH BERKUNJUNG')
+            print('=============================')
+            break
+        else:
+            print('input salah\nmasukan lagi')
+
+print('---------------------------------------')
+print('Selamat Datang di Toko Baju Satu Ukuran')
+print('  Silahkan Lihat Barang-Barang Kami')
+print('---------------------------------------')
+menu()
