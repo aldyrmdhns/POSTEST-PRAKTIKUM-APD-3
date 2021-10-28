@@ -95,22 +95,29 @@ def menu():
         x = input('Masukan Pilihan anda: ')
         if x == '1' or x == 'baju':
             Baju()
-            print('=============================')
-            print('TERIMA KASIH TELAH BERBELANJA')
-            print('=============================')
-            break
+            choice = input('Apakah anda ingin belanja lagi? y/n : ')
+            if choice == 'n':
+                print('=============================')
+                print('TERIMA KASIH TELAH BERBELANJA')
+                print('=============================')
+                break            
         elif x == '2' or x == 'celana':
             Celana()
-            print('=============================')
-            print('TERIMA KASIH TELAH BERBELANJA')
-            print('=============================')
-            break
+            choice = input('Apakah anda ingin belanja lagi? y/n : ')
+            if choice == 'n':
+                print('=============================')
+                print('TERIMA KASIH TELAH BERBELANJA')
+                print('=============================')
+                break
         elif x == '3' or x == 'jaket':
             Jaket()
-            print('=============================')
-            print('TERIMA KASIH TELAH BERBELANJA')
-            print('=============================')
-            break
+            choice = input('Apakah anda ingin belanja lagi? y/n : ')
+            if choice == 'n':
+                print('=============================')
+                print('TERIMA KASIH TELAH BERBELANJA')
+                print('=============================')
+                break  
+            
         elif x == '4' or x == 'Exit':
             print('=============================')
             print('TERIMA KASIH TELAH BERKUNJUNG')
